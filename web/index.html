@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+  <!-- Primary SEO Metadata -->
+  <title>SERVEGX — Real-Time Infrastructure Monitoring &amp; Observability Platform</title>
+  <meta name="description" content="SERVEGX delivers sub-millisecond cloud infrastructure monitoring, eBPF server telemetry, incident alerting, and distributed logs exploration for modern DevOps and SRE teams.">
+  <meta name="keywords" content="infrastructure monitoring, server monitoring, DevOps monitoring, cloud observability, eBPF telemetry, real-time server monitoring, incident alerting, system metrics">
+  <meta name="author" content="SERVEGX Inc.">
+  <link rel="canonical" href="https://servegx.io/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SERVEGX">
+  <meta property="og:url" content="https://servegx.io/">
+  <meta property="og:title" content="SERVEGX — Real-Time Infrastructure Monitoring &amp; Observability Platform">
+  <meta property="og:description" content="Sub-millisecond infrastructure monitoring and cloud observability for servers, CPU, RAM, NVMe storage, and distributed system logs.">
+  <meta property="og:image" content="https://servegx.io/icons/Icon-512.png">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@servegx">
+  <meta name="twitter:creator" content="@servegx">
+  <meta name="twitter:title" content="SERVEGX — Real-Time Infrastructure Monitoring &amp; Observability">
+  <meta name="twitter:description" content="Sub-millisecond infrastructure monitoring and cloud observability for servers, CPU, RAM, NVMe storage, and distributed system logs.">
+  <meta name="twitter:image" content="https://servegx.io/icons/Icon-512.png">
+
+  <!-- Theming and Colors -->
+  <meta name="theme-color" content="#00C7A5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#070A0F" media="(prefers-color-scheme: dark)">
+
+  <!-- Preconnect to Font & CDN domains for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    html, body {
+      background-color: #070A0F;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    #loading-indicator {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #070A0F;
+      color: #F8FAFC;
+      z-index: 9999;
+      transition: opacity 300ms ease;
+    }
+    .loading-spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid rgba(0, 199, 165, 0.2);
+      border-top-color: #00C7A5;
+      border-radius: 50%;
+      animation: sgx-spin 0.8s linear infinite;
+    }
+    @keyframes sgx-spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SERVEGX">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- JSON-LD Structured Data: SoftwareApplication & Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://servegx.io/#organization",
+        "name": "SERVEGX Inc.",
+        "url": "https://servegx.io/",
+        "logo": "https://servegx.io/icons/Icon-512.png",
+        "sameAs": [
+          "https://github.com/servegx",
+          "https://twitter.com/servegx"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://servegx.io/#website",
+        "url": "https://servegx.io/",
+        "name": "SERVEGX",
+        "publisher": { "@id": "https://servegx.io/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://servegx.io/#/servers?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "SERVEGX Infrastructure Monitoring & Observability",
+        "operatingSystem": "Linux, Windows, macOS, Android, Web",
+        "applicationCategory": "DevOpsApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        },
+        "description": "Enterprise-grade real-time infrastructure monitoring, CPU, memory, NVMe disk, and network observability with incident alerting and distributed logs explorer."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Crawlable semantic fallback for Search Engine Bots & Non-JS Clients -->
+  <noscript>
+    <div style="padding: 40px; max-width: 800px; margin: 0 auto; color: #FFFFFF; font-family: sans-serif; line-height: 1.6;">
+      <h1>SERVEGX — Modern Infrastructure Monitoring &amp; Observability Platform</h1>
+      <p>
+        SERVEGX is a production-grade infrastructure observability and DevOps telemetry platform. Monitor servers, CPU, RAM, NVMe storage, and distributed system logs with sub-millisecond streaming precision across multi-cloud regions.
+      </p>
+      <h2>Core Platform Features</h2>
+      <ul>
+        <li><strong>Server Fleet Management:</strong> Real-time hardware health, OS metrics, uptime, and agent status.</li>
+        <li><strong>Resource Observability:</strong> High-resolution telemetry for CPU load, memory pressure, and disk I/O.</li>
+        <li><strong>Incident &amp; Alert Management:</strong> Multi-condition alert rules, PagerDuty/Slack routing, and automated root-cause correlation.</li>
+        <li><strong>Observability Logs Explorer:</strong> Distributed log stream with syntax search, structured JSON attributes, and live tailing.</li>
+        <li><strong>Multi-Cloud Tenancy:</strong> Europe (eu-west-1), North America (us-east-1), and Asia Pacific (ap-south-1).</li>
+      </ul>
+      <p>Please enable JavaScript to access the interactive SERVEGX Console.</p>
+    </div>
+  </noscript>
+
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

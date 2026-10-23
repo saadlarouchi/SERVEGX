@@ -1,0 +1,6 @@
+# SERVEGX Web SEO Robots Directives
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://servegx.io/sitemap.xml
