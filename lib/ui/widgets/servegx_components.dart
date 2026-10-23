@@ -25,33 +25,20 @@ class ServeGxLogo extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
+        SizedBox(
           width: size,
           height: size,
-          decoration: BoxDecoration(
-            color: AppColors.isLight ? const Color(0xFFE6F9F5) : const Color(0xFF0F2624),
-            borderRadius: BorderRadius.circular(size * 0.28),
-            border: Border.all(
-              color: AppColors.primary.withValues(alpha: 0.6),
-              width: 1.2,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.primary.withValues(alpha: 0.25),
-                blurRadius: 8,
-                spreadRadius: 0,
-              ),
-            ],
-          ),
-          child: Center(
-            child: CustomPaint(
-              size: Size(size * 0.55, size * 0.55),
-              painter: _LogoWavePainter(color: AppColors.primary),
-            ),
+          child: Image.asset(
+            'assets/images/servegx_logo.png',
+            width: size,
+            height: size,
+            fit: BoxFit.contain,
+            filterQuality: FilterQuality.high,
           ),
         ),
+
         if (showText) ...[
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Text(
             'SERVEGX',
             style: TextStyle(
@@ -67,41 +54,6 @@ class ServeGxLogo extends StatelessWidget {
   }
 }
 
-class _LogoWavePainter extends CustomPainter {
-  final Color color;
-  _LogoWavePainter({required this.color});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color
-      ..strokeWidth = size.width * 0.16
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round
-      ..style = PaintingStyle.stroke;
-
-    // Dual stylized telemetry waveform
-    final path1 = Path();
-    path1.moveTo(0, size.height * 0.3);
-    path1.lineTo(size.width * 0.35, size.height * 0.3);
-    path1.lineTo(size.width * 0.5, size.height * 0.1);
-    path1.lineTo(size.width * 0.7, size.height * 0.5);
-    path1.lineTo(size.width, size.height * 0.3);
-
-    final path2 = Path();
-    path2.moveTo(0, size.height * 0.75);
-    path2.lineTo(size.width * 0.3, size.height * 0.75);
-    path2.lineTo(size.width * 0.5, size.height * 0.95);
-    path2.lineTo(size.width * 0.65, size.height * 0.6);
-    path2.lineTo(size.width, size.height * 0.75);
-
-    canvas.drawPath(path1, paint);
-    canvas.drawPath(path2, paint);
-  }
-
-  @override
-  bool shouldRepaint(covariant _LogoWavePainter oldDelegate) => false;
-}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // 2. STATUS BADGES
